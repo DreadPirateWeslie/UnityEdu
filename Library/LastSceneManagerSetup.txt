@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/multivariable function grapher.unity
+  isLoaded: 1
+  isActive: 1
