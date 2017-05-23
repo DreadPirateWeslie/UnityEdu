@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Input_Interpreter;
 
 
 
@@ -129,9 +130,11 @@ public class Graph : MonoBehaviour {
         newMesh.uv = uvs;
     }
 
+	var multiVariableFunction = new MultiVariableFunction("x * y + 1");
+
     float function(float x, float z)
     {
-        /*
+		/*
         if (x==.5 & z==.5)
         {
             return (1);
@@ -141,8 +144,9 @@ public class Graph : MonoBehaviour {
             return (0);
         }
         */
-        //the function to be graphed
-        //not yet sure how to have the user enter this
+		//the function to be graphed
+		//not yet sure how to have the user enter this
+		Function function = new Function();
         return (x*x-z*z)*zScale;
     }
 

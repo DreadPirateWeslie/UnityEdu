@@ -46,6 +46,8 @@
     <Compile Include="ArrayUtils.cs" />
     <Compile Include="Calc.cs" />
     <Compile Include="CalcMath.cs" />
+    <Compile Include="Visualization.cs" />
+    <Compile Include="MultiVariableFunction.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="NotationUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

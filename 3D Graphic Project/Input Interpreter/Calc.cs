@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static Input_Interpreter.Token;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Input_Interpreter
 {
@@ -22,7 +24,13 @@ namespace Input_Interpreter
 
 		static void Main(string[] args)
 		{
-			Calc c = new Calc();
+            Visualization vis = new Visualization((x,y) => x+y);
+            XmlSerializer mySerializer = new XmlSerializer(vis.GetType());
+            StreamWriter s = new StreamWriter("serializedVisualization.xml");
+            mySerializer.Serialize(s, vis);
+            s.Close();
+            /*
+            Calc c = new Calc();
 			Console.WriteLine("--------------------------");
 			while (true)
 			{
@@ -38,6 +46,7 @@ namespace Input_Interpreter
 					Console.WriteLine(e.Message);
 				}
 			}
+            */
 		}
 
 		public Calc()
